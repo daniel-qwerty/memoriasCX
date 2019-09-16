@@ -28,7 +28,7 @@ const app = new Vue({
         if (sessionStorage.getItem("login")) {
             window.location.href = "quiz.html";
         } else {
-            axios.get("/users.json").then(response => {
+            axios.get("users.json").then(response => {
                 this.users = response.data;
             });
         }
