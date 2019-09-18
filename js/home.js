@@ -6,7 +6,7 @@ const app = new Vue({
     methods: {},
     mounted() {
         if (!sessionStorage.getItem("login")) {
-            window.location.href = "/";
+            window.location.href = "/memorias-cx-2019/";
         }
         sessionStorage.setItem("encuesta", "yes");
         axios.get("/data.json").then(response => {
