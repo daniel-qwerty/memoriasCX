@@ -17,7 +17,8 @@ const app = new Vue({
                 sessionStorage.setItem("login", "yes");
                 this.Url =
                     "quiz.html?name=" + result[0].Nombres + "&email=" + result[0].Correo;
-                window.location.href = this.Url;
+               // window.location.href = this.Url;
+               window.location.href = "home.html";
             } else {
                 alert("Datos Incorrectos, intentelo nuevamente por favor");
             }
@@ -26,7 +27,8 @@ const app = new Vue({
     },
     mounted() {
         if (sessionStorage.getItem("login")) {
-            window.location.href = "quiz.html";
+            //window.location.href = "quiz.html";
+            window.location.href = "home.html";
         } else {
             axios.get("users.json").then(response => {
                 this.users = response.data;
